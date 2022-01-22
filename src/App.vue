@@ -1,6 +1,13 @@
 <template>
   <div class="Blocks">
-    <Block v-for="(block, i) in blocks" :key="i" :block="block" />
+    <Block
+      v-for="(block, i) in blocks"
+      :key="i"
+      :id="i"
+      :block="block"
+      :suggestions="suggestions"
+      @on-select="onBlockSelect"
+    />
     <button v-on:click="addBlock(0)">Add Block</button>
   </div>
 </template>
@@ -21,6 +28,7 @@ export default defineComponent({
   data() {
     return {
       blocks: [] as IBlock[],
+      suggestions,
     };
   },
   methods: {
@@ -31,6 +39,9 @@ export default defineComponent({
         text1: "",
         text2: "",
       });
+    },
+    onBlockSelect(values: { id: number; selection: number }) {
+      console.log(values);
     },
   },
 });
