@@ -1,17 +1,21 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  <div class="Blocks">
+    <Block v-for="(block, i) in blocks" :key="i" :block="block" />
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import Block from "./components/Block.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    HelloWorld,
+    Block,
   },
+  data: () => ({
+    blocks: [1, 2, 3],
+  }),
 });
 </script>
 
