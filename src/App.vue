@@ -1,59 +1,41 @@
 <template>
-  <div class="Blocks">
-    <Block
-      v-for="(block, i) in blocks"
-      :key="i"
-      :id="i"
-      :block="block"
-      :suggestions="suggestions"
-      @on-select="onBlockSelect"
-    />
-    <button v-on:click="addBlock(0)">Add Block</button>
+  <div class="App" :class="theme">
+    <Canvas />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import Block from "./components/Block.vue";
+import { Theme } from "./types";
 
-import suggestions from "./data/suggestions";
-import { IBlock } from "./interfaces";
+import Canvas from "./components/Canvas.vue";
 
 export default defineComponent({
   name: "App",
   components: {
-    Block,
+    Canvas,
   },
   data() {
     return {
-      blocks: [] as IBlock[],
-      suggestions,
+      theme: "light" as Theme,
     };
   },
-  methods: {
-    addBlock(index: number) {
-      this.blocks.push({
-        heading: suggestions[index].text,
-        cols: suggestions[index].cols,
-        text1: "",
-        text2: "",
-      });
-    },
-    onBlockSelect(values: { id: number; selection: number }) {
-      console.log(values);
-    },
-  },
+  methods: {},
 });
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+.App {
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.App.light {
+  background: var(--gray-light);
+}
+
+.App.dark {
+  background: var(--gray-dark);
 }
 </style>
