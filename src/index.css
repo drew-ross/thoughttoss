@@ -1,3 +1,6 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@100;200;300;400;500;600;700&family=Pacifico&display=swap");
+
 /* Reset */
 html {
   box-sizing: border-box;
@@ -37,8 +40,14 @@ img {
 
 /* Variables */
 :root {
-  --gray-light: #e9eef3;
+  /* Fonts */
+  --font-heading: "Pacifico", italic;
+  --font-main: "IBM Plex Sans Thai Looped", sans-serif;
+  /* Colors */
+  --white: #f0f3f5;
   --gray-dark: #1e1f20;
   --black: #141414;
-  --theme-primary: rgb(180, 47, 174);
+  --theme-primary: rgb(219, 149, 103);
+  /* Other */
+  --smooth-shadow: 0 0.3rem 1.5rem rgba(19, 19, 19, 0.034);
 }
