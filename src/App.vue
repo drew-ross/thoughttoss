@@ -1,5 +1,6 @@
 <template>
   <div class="App" :class="theme">
+    <Header />
     <Canvas />
   </div>
 </template>
@@ -10,10 +11,12 @@ import { defineComponent } from "vue";
 import { Theme } from "./types";
 
 import Canvas from "./components/Canvas.vue";
+import Header from "./components/Header.vue";
 
 export default defineComponent({
   name: "App",
   components: {
+    Header,
     Canvas,
   },
   data() {
@@ -32,10 +35,15 @@ export default defineComponent({
 }
 
 .App.light {
-  background: var(--gray-light);
+  background: var(--white);
 }
 
 .App.dark {
   background: var(--gray-dark);
+}
+
+p {
+  font-family: var(--font-main);
+  color: var(--gray-dark);
 }
 </style>
