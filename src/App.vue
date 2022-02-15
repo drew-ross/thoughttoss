@@ -1,7 +1,7 @@
 <template>
   <div class="App" :class="theme">
-    <Header />
-    <Canvas />
+    <Header @theme-mode="switchThemeMode" :theme="theme" />
+    <Canvas :theme="theme" />
   </div>
 </template>
 
@@ -21,10 +21,15 @@ export default defineComponent({
   },
   data() {
     return {
-      theme: "light" as Theme,
+      theme: localStorage.getItem("theme") || ("light" as Theme),
     };
   },
-  methods: {},
+  methods: {
+    switchThemeMode: function () {
+      this.theme === "light" ? (this.theme = "dark") : (this.theme = "light");
+      localStorage.setItem("theme", this.theme);
+    },
+  },
 });
 </script>
 
@@ -32,6 +37,7 @@ export default defineComponent({
 .App {
   min-height: 100vh;
   width: 100vw;
+  transition-duration: 0.5s;
 }
 
 .App.light {
