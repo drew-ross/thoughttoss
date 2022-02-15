@@ -1,5 +1,5 @@
 <template>
-  <div class="Canvas">
+  <div class="Canvas" :class="theme">
     <div id="content" contenteditable="true" spellcheck="false" />
   </div>
 </template>
@@ -9,19 +9,20 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Canvas",
+  props: ["theme"],
 });
 </script>
 
 <style>
 .Canvas {
   height: 100%;
-  padding: 2rem 6rem;
+  padding: 4rem 6rem;
   min-height: calc(100vh - 5rem);
 }
 
 #content {
   font-size: 1.5rem;
-  min-height: calc(100vh - 9rem);
+  min-height: calc(100vh - 14rem);
   width: 100%;
   font-family: var(--font-main);
   color: var(--gray-dark);
@@ -30,6 +31,10 @@ export default defineComponent({
 
 #content b {
   color: var(--theme-primary);
+}
+
+.Canvas.dark #content {
+  color: var(--white);
 }
 
 ::selection {
