@@ -41,9 +41,4 @@ export default defineComponent({
 .App.dark {
   background: var(--gray-dark);
 }
-
-p {
-  font-family: var(--font-main);
-  color: var(--gray-dark);
-}
 </style>
