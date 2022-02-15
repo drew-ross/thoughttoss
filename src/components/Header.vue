@@ -15,14 +15,18 @@ export default defineComponent({
 <style scoped>
 .Header {
   width: 100%;
-  padding: 1rem 6rem;
+  height: 5rem;
+  padding: 0 6rem;
   background: var(--white);
   box-shadow: var(--smooth-shadow);
+  display: flex;
+  align-items: center;
 }
 
 h1 {
   font-size: 1.8rem;
   color: var(--theme-primary);
   font-family: var(--font-heading);
+  pointer-events: none;
 }
 </style>
