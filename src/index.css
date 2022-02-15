@@ -47,7 +47,8 @@ img {
   --white: #f0f3f5;
   --gray-dark: #1e1f20;
   --black: #141414;
-  --theme-primary: rgb(219, 149, 103);
+  --theme-primary: rgb(219, 103, 209);
+  --theme-primary-50: rgba(219, 103, 209, 0.5);
   /* Other */
   --smooth-shadow: 0 0.3rem 1.5rem rgba(19, 19, 19, 0.034);
 }
