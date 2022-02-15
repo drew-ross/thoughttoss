@@ -1,17 +1,6 @@
 <template>
   <div class="Canvas">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      consequuntur eos veritatis dicta autem odit aliquid cumque ad, nostrum
-      doloribus, officiis tenetur itaque quos voluptate voluptatibus beatae,
-      iste sapiente accusamus!
-    </p>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
-      consequuntur eos veritatis dicta autem odit aliquid cumque ad, nostrum
-      doloribus, officiis tenetur itaque quos voluptate voluptatibus beatae,
-      iste sapiente accusamus!
-    </p>
+    <div id="content" contenteditable="true" spellcheck="false" />
   </div>
 </template>
 
@@ -23,13 +12,32 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
 .Canvas {
   height: 100%;
-  padding: 6rem;
+  padding: 2rem 6rem;
+  min-height: calc(100vh - 5rem);
 }
 
-p {
+#content {
   font-size: 1.5rem;
+  min-height: calc(100vh - 9rem);
+  width: 100%;
+  font-family: var(--font-main);
+  color: var(--gray-dark);
+  caret-color: var(--theme-primary-50);
+}
+
+#content b {
+  color: var(--theme-primary);
+}
+
+::selection {
+  background: var(--theme-primary);
+  color: var(--white);
+}
+
+#content:focus {
+  outline: none;
 }
 </style>
