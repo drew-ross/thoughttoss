@@ -47,4 +47,11 @@ export default defineComponent({
 .App.dark {
   background: var(--gray-dark);
 }
+
+.container {
+  max-width: 80rem;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
 </style>
