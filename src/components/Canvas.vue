@@ -28,11 +28,11 @@ export default defineComponent({
   width: 100%;
   font-family: var(--font-main);
   color: var(--gray-dark);
-  caret-color: var(--theme-primary-50);
+  caret-color: var(--theme-pink-50);
 }
 
 #content b {
-  color: var(--theme-primary);
+  color: var(--theme-pink);
 }
 
 .Canvas.dark #content {
@@ -40,7 +40,7 @@ export default defineComponent({
 }
 
 ::selection {
-  background: var(--theme-primary);
+  background: var(--theme-pink);
   color: var(--white);
 }
 

@@ -48,7 +48,7 @@ export default defineComponent({
 
 h1 {
   font-size: 1.8rem;
-  color: var(--theme-primary);
+  color: var(--theme-pink);
   font-family: var(--font-heading);
   pointer-events: none;
 }
@@ -57,7 +57,7 @@ button {
   height: 2rem;
   min-width: 2rem;
   font-size: 1.4rem;
-  background: var(--theme-primary);
+  background: var(--theme-pink);
   color: var(--white);
   border: none;
   border-radius: 1rem;
@@ -80,7 +80,7 @@ button:hover {
 
 .btn-theme-mode {
   background: var(--black);
-  border: 2px solid var(--theme-primary);
+  border: 2px solid var(--theme-pink);
 }
 
 .btn-theme-mode.light .btn-inner-semi {
