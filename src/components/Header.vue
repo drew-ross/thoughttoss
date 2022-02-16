@@ -1,16 +1,18 @@
 <template>
   <header class="Header" :class="theme">
-    <h1>thoughttoss</h1>
-    <div class="menu-buttons">
-      <button @click="textCommand('bold')"><strong>B</strong></button>
-      <button @click="textCommand('italic')"><em>I</em></button>
-      <button
-        class="btn-theme-mode"
-        :class="theme"
-        @click="$emit('theme-mode')"
-      >
-        <div class="btn-inner-semi" />
-      </button>
+    <div class="container flex">
+      <h1>thoughttoss</h1>
+      <div class="menu-buttons">
+        <button @click="textCommand('bold')"><strong>B</strong></button>
+        <button @click="textCommand('italic')"><em>I</em></button>
+        <button
+          class="btn-theme-mode"
+          :class="theme"
+          @click="$emit('theme-mode')"
+        >
+          <div class="btn-inner-semi" />
+        </button>
+      </div>
     </div>
   </header>
 </template>
@@ -37,8 +39,6 @@ export default defineComponent({
   padding: 0 6rem;
   background: var(--white);
   box-shadow: var(--smooth-shadow);
-  display: flex;
-  align-items: center;
   transition-duration: 0.5s;
 }
 
@@ -98,5 +98,10 @@ button:hover {
   border-radius: 0 0 1rem 1rem;
   background: var(--white);
   z-index: 100;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
 }
 </style>
