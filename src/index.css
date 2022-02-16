@@ -49,6 +49,8 @@ img {
   --black: #141414;
   --theme-pink: rgb(219, 103, 209);
   --theme-pink-50: rgba(219, 103, 209, 0.5);
+  --theme-green: rgb(83, 187, 114);
+  --theme-green-50: rgba(103, 219, 151, 0.5);
   /* Other */
   --smooth-shadow: 0 0.3rem 1.5rem rgba(19, 19, 19, 0.034);
 }
