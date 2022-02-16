@@ -1,6 +1,10 @@
 <template>
   <div class="App" :class="theme">
-    <Header @theme-mode="switchThemeMode" :theme="theme" />
+    <Header
+      @theme-mode="switchThemeMode"
+      :theme="theme"
+      :themeColor="themeColor"
+    />
     <Canvas :theme="theme" />
   </div>
 </template>
@@ -8,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-import { Theme } from "./types";
+import { Theme, ThemeColor } from "./types";
 
 import Canvas from "./components/Canvas.vue";
 import Header from "./components/Header.vue";
@@ -22,6 +26,7 @@ export default defineComponent({
   data() {
     return {
       theme: localStorage.getItem("theme") || ("light" as Theme),
+      themeColor: localStorage.getItem("themeColor") || ("green" as ThemeColor),
     };
   },
   methods: {
