@@ -34,6 +34,10 @@ export default defineComponent({
       this.theme === "light" ? (this.theme = "dark") : (this.theme = "light");
       localStorage.setItem("theme", this.theme);
     },
+    switchThemeColor: function (color: ThemeColor) {
+      this.themeColor = color;
+      localStorage.setItem("themeColor", this.themeColor);
+    },
   },
 });
 </script>
