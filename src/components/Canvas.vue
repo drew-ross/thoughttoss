@@ -1,6 +1,8 @@
 <template>
   <div class="Canvas" :class="theme">
-    <div id="content" contenteditable="true" spellcheck="false" />
+    <div class="container">
+      <div id="content" contenteditable="true" spellcheck="false" />
+    </div>
   </div>
 </template>
 
