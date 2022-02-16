@@ -1,16 +1,13 @@
 <template>
-  <header class="Header" :class="theme">
+  <header class="Header" :class="[theme, themeColor]">
     <div class="container flex">
       <h1>thoughttoss</h1>
       <div class="menu-buttons">
         <button @click="textCommand('bold')"><strong>B</strong></button>
         <button @click="textCommand('italic')"><em>I</em></button>
-        <button
-          class="btn-theme-mode"
-          :class="theme"
-          @click="$emit('theme-mode')"
-        >
-          <div class="btn-inner-semi" />
+        <button class="btn-theme-mode" @click="$emit('theme-mode')">
+          <div class="btn-inner-white" />
+          <div class="btn-inner-switch" />
         </button>
       </div>
     </div>
@@ -22,7 +19,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Header",
-  props: ["theme"],
+  props: ["theme", "themeColor"],
   methods: {
     textCommand: (command: string) => {
       document.execCommand(command, false);
@@ -48,7 +45,7 @@ export default defineComponent({
 
 h1 {
   font-size: 1.8rem;
-  color: var(--theme-pink);
+
   font-family: var(--font-heading);
   pointer-events: none;
 }
@@ -79,15 +76,16 @@ button:hover {
 }
 
 .btn-theme-mode {
-  background: var(--black);
-  border: 2px solid var(--theme-pink);
+  background: var(--black) !important;
+  border: 2px solid;
 }
 
-.btn-theme-mode.light .btn-inner-semi {
+.Header.light .btn-inner-switch {
   transform: rotate(180deg);
 }
 
-.btn-inner-semi {
+.btn-inner-white,
+.btn-inner-switch {
   position: absolute;
   transition-duration: 0.2s;
   width: 100%;
@@ -96,12 +94,58 @@ button:hover {
   left: 0;
   clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
   border-radius: 0 0 1rem 1rem;
+}
+
+.btn-inner-white {
   background: var(--white);
-  z-index: 100;
 }
 
 .flex {
   display: flex;
   align-items: center;
+}
+
+/* Theme colors */
+
+/* Pink */
+.Header.pink h1 {
+  color: var(--theme-pink);
+}
+
+.Header.pink button,
+.Header.pink .btn-inner-switch {
+  background: var(--theme-pink);
+}
+
+.Header.pink .btn-theme-mode {
+  border-color: var(--theme-pink);
+}
+
+/* Green */
+.Header.green h1 {
+  color: var(--theme-green);
+}
+
+.Header.green button,
+.Header.green .btn-inner-switch {
+  background: var(--theme-green);
+}
+
+.Header.green .btn-theme-mode {
+  border-color: var(--theme-green);
+}
+
+/* Blue */
+.Header.blue h1 {
+  color: var(--theme-blue);
+}
+
+.Header.blue button,
+.Header.blue .btn-inner-switch {
+  background: var(--theme-blue);
+}
+
+.Header.blue .btn-theme-mode {
+  border-color: var(--theme-blue);
 }
 </style>
