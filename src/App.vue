@@ -5,7 +5,7 @@
       :theme="theme"
       :themeColor="themeColor"
     />
-    <Canvas :theme="theme" />
+    <Canvas :theme="theme" :themeColor="themeColor" />
   </div>
 </template>
 
