@@ -1,5 +1,5 @@
 <template>
-  <div class="Canvas" :class="theme">
+  <div class="Canvas" :class="[theme, themeColor]">
     <div class="container">
       <div id="content" contenteditable="true" spellcheck="false" />
     </div>
@@ -11,7 +11,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Canvas",
-  props: ["theme"],
+  props: ["theme", "themeColor"],
 });
 </script>
 
@@ -28,23 +28,47 @@ export default defineComponent({
   width: 100%;
   font-family: var(--font-main);
   color: var(--gray-dark);
-  caret-color: var(--theme-pink-50);
-}
-
-#content b {
-  color: var(--theme-pink);
-}
-
-.Canvas.dark #content {
-  color: var(--white);
-}
-
-::selection {
-  background: var(--theme-pink);
-  color: var(--white);
 }
 
 #content:focus {
   outline: none;
+}
+
+::selection {
+  color: var(--white);
+}
+
+/* Theme colors */
+
+/* Dark-mode */
+.Canvas.dark #content {
+  color: var(--white);
+}
+
+/* Pink */
+.Canvas.pink #content {
+  caret-color: var(--theme-pink-50);
+}
+
+.Canvas.pink ::selection {
+  background: var(--theme-pink);
+}
+
+/* Green */
+.Canvas.green #content {
+  caret-color: var(--theme-green);
+}
+
+.Canvas.green ::selection {
+  background: var(--theme-green);
+}
+
+/* Blue */
+.Canvas.blue #content {
+  caret-color: var(--theme-blue-50);
+}
+
+.Canvas.blue ::selection {
+  background: var(--theme-blue);
 }
 </style>
