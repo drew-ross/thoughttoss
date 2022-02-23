@@ -1,6 +1,6 @@
 <template>
   <header class="Header" :class="[theme, themeColor]">
-    <div class="container flex">
+    <div id="header-content" class="container">
       <h1>thoughttoss</h1>
       <div class="menu-buttons">
         <button @click="textCommand('bold')"><strong>B</strong></button>
@@ -30,6 +30,13 @@ export default defineComponent({
 </script>
 
 <style scoped>
+#header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 .Header {
   width: 100%;
   height: 5rem;
@@ -45,9 +52,10 @@ export default defineComponent({
 
 h1 {
   font-size: 1.8rem;
-
   font-family: var(--font-heading);
   pointer-events: none;
+  position: absolute;
+  left: 0;
 }
 
 button {
@@ -70,7 +78,6 @@ button:hover {
 }
 
 .menu-buttons {
-  margin-left: auto;
   display: flex;
   justify-items: center;
 }
@@ -98,11 +105,6 @@ button:hover {
 
 .btn-inner-white {
   background: var(--white);
-}
-
-.flex {
-  display: flex;
-  align-items: center;
 }
 
 /* Theme colors */
