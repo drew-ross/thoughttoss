@@ -46,7 +46,7 @@ export default defineComponent({
 .App {
   min-height: 100vh;
   width: 100vw;
-  transition-duration: 0.5s;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 .App.light {
