@@ -12,6 +12,8 @@
           <div class="btn-inner-white" />
           <div class="btn-inner-switch" />
         </button>
+        <!-- theme color -->
+        <button @click="$emit('theme-color')" />
       </div>
     </div>
   </header>
