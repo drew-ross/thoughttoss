@@ -3,8 +3,11 @@
     <div id="header-content" class="container">
       <h1>thoughttoss</h1>
       <div class="menu-buttons">
+        <!-- bold -->
         <button @click="textCommand('bold')"><strong>B</strong></button>
+        <!-- italic -->
         <button @click="textCommand('italic')"><em>I</em></button>
+        <!-- theme mode (dark/light) -->
         <button class="btn-theme-mode" @click="$emit('theme-mode')">
           <div class="btn-inner-white" />
           <div class="btn-inner-switch" />
