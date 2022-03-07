@@ -48,7 +48,7 @@ export default defineComponent({
   padding: 0 6rem;
   background: var(--white);
   box-shadow: var(--smooth-shadow);
-  transition: background-color 0.5s;
+  transition: background-color 0.2s;
 }
 
 .Header.dark {
