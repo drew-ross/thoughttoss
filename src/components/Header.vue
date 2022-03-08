@@ -14,6 +14,8 @@
         </button>
         <!-- theme color -->
         <button @click="$emit('theme-color')" />
+        <!-- print button -->
+        <button @click="printPage">V</button>
       </div>
     </div>
   </header>
@@ -29,6 +31,9 @@ export default defineComponent({
     textCommand: function (command: string) {
       document.execCommand(command, false);
       document.getElementById("content")?.focus();
+    },
+    printPage: function () {
+      print();
     },
   },
 });
