@@ -15,7 +15,9 @@
         <!-- theme color -->
         <button @click="$emit('theme-color')" />
         <!-- print button -->
-        <button @click="printPage">V</button>
+        <button class="btn-print" @click="printPage">
+          <img src="../assets/print-solid.svg" />
+        </button>
       </div>
     </div>
   </header>
@@ -115,6 +117,14 @@ button:hover {
 
 .btn-inner-white {
   background: var(--white);
+}
+
+.btn-print {
+  padding: 0.38rem;
+}
+
+.btn-print img {
+  filter: invert();
 }
 
 /* Theme colors */
