@@ -58,10 +58,6 @@ export default defineComponent({
   transition: background-color 0.2s;
 }
 
-.Header.dark {
-  background: var(--black);
-}
-
 h1 {
   font-size: 1.8rem;
   font-family: var(--font-heading);
@@ -82,6 +78,7 @@ button {
   box-shadow: var(--smooth-shadow);
   cursor: pointer;
   position: relative;
+  transition: color 0.2s;
 }
 
 button:hover {
@@ -97,10 +94,6 @@ button:hover {
 .btn-theme-mode {
   background: var(--black) !important;
   border: 2px solid;
-}
-
-.Header.light .btn-inner-switch {
-  transform: rotate(180deg);
 }
 
 .btn-inner-white,
@@ -124,10 +117,28 @@ button:hover {
 }
 
 .btn-print img {
-  filter: invert();
+  transition: filter 0.2s;
 }
 
 /* Theme colors */
+
+/* Dark Mode */
+.Header.dark {
+  background: var(--black);
+}
+
+.Header.dark button {
+  color: var(--black);
+}
+
+/* Light Mode */
+.Header.light .btn-print img {
+  filter: invert();
+}
+
+.Header.light .btn-inner-switch {
+  transform: rotate(180deg);
+}
 
 /* Pink */
 .Header.pink h1 {
