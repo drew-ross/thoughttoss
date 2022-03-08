@@ -32,6 +32,9 @@ export default defineComponent({
       themeColor: this.loadThemeColor(),
     };
   },
+  mounted() {
+    document.getElementById("content")?.focus();
+  },
   methods: {
     switchThemeMode: function () {
       this.theme === "light" ? (this.theme = "dark") : (this.theme = "light");
