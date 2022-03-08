@@ -26,7 +26,7 @@ export default defineComponent({
   name: "Header",
   props: ["theme", "themeColor"],
   methods: {
-    textCommand: (command: string) => {
+    textCommand: function (command: string) {
       document.execCommand(command, false);
       document.getElementById("content")?.focus();
     },
