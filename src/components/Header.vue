@@ -155,4 +155,19 @@ button:hover {
 .Header.blue .btn-theme-mode {
   border-color: var(--theme-blue);
 }
+
+/* Media styles */
+@media print {
+  .menu-buttons {
+    display: none;
+  }
+  .Header {
+    height: 2.4rem;
+  }
+  h1 {
+    font-size: 0.8rem;
+    position: inherit;
+    margin: auto;
+  }
+}
 </style>
