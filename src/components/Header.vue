@@ -71,7 +71,7 @@ h1 {
 button {
   height: 2rem;
   min-width: 2rem;
-  font-size: 1.4rem;
+  font: 1.4rem serif;
   background: var(--theme-pink);
   color: var(--white);
   border: none;
