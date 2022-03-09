@@ -9,8 +9,8 @@
         <button id="btn-italic" @click="textCommand('italic')"><em>I</em></button>
         <!-- theme mode (dark/light) -->
         <button id="btn-theme-mode" @click="$emit('theme-mode')">
-          <div id="btn-inner-white" />
-          <div id="btn-inner-switch" />
+          <div id="btn-theme-mode__white" />
+          <div id="btn-theme-mode__switch" />
         </button>
         <!-- theme color -->
         <button id="btn-theme-color" @click="$emit('theme-color')" />
@@ -42,13 +42,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-#header-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-
 .Header {
   width: 100%;
   height: 5rem;
@@ -91,13 +84,20 @@ button:hover {
   justify-items: center;
 }
 
+#header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
 #btn-theme-mode {
   background: var(--black) !important;
   border: 2px solid;
 }
 
-#btn-inner-white,
-#btn-inner-switch {
+#btn-theme-mode__white,
+#btn-theme-mode__switch {
   position: absolute;
   transition-duration: 0.2s;
   width: 100%;
@@ -108,7 +108,7 @@ button:hover {
   border-radius: 0 0 1rem 1rem;
 }
 
-#btn-inner-white {
+#btn-theme-mode__white {
   background: var(--white);
 }
 
@@ -136,7 +136,7 @@ button:hover {
   filter: invert();
 }
 
-.Header.light #btn-inner-switch {
+.Header.light #btn-theme-mode__switch {
   transform: rotate(180deg);
 }
 
@@ -146,7 +146,7 @@ button:hover {
 }
 
 .Header.pink button,
-.Header.pink #btn-inner-switch {
+.Header.pink #btn-theme-mode__switch {
   background: var(--theme-pink);
 }
 
@@ -160,7 +160,7 @@ button:hover {
 }
 
 .Header.green button,
-.Header.green #btn-inner-switch {
+.Header.green #btn-theme-mode__switch {
   background: var(--theme-green);
 }
 
@@ -174,7 +174,7 @@ button:hover {
 }
 
 .Header.blue button,
-.Header.blue #btn-inner-switch {
+.Header.blue #btn-theme-mode__switch {
   background: var(--theme-blue);
 }
 
