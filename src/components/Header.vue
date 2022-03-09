@@ -4,18 +4,18 @@
       <h1>thoughttoss</h1>
       <div class="menu-buttons">
         <!-- bold -->
-        <button @click="textCommand('bold')"><strong>B</strong></button>
+        <button id="btn-bold" @click="textCommand('bold')"><strong>B</strong></button>
         <!-- italic -->
-        <button @click="textCommand('italic')"><em>I</em></button>
+        <button id="btn-italic" @click="textCommand('italic')"><em>I</em></button>
         <!-- theme mode (dark/light) -->
-        <button class="btn-theme-mode" @click="$emit('theme-mode')">
-          <div class="btn-inner-white" />
-          <div class="btn-inner-switch" />
+        <button id="btn-theme-mode" @click="$emit('theme-mode')">
+          <div id="btn-inner-white" />
+          <div id="btn-inner-switch" />
         </button>
         <!-- theme color -->
-        <button @click="$emit('theme-color')" />
+        <button id="btn-theme-color" @click="$emit('theme-color')" />
         <!-- print button -->
-        <button class="btn-print" @click="printPage">
+        <button id="btn-print" @click="printPage">
           <img src="../assets/print-solid.svg" />
         </button>
       </div>
@@ -91,13 +91,13 @@ button:hover {
   justify-items: center;
 }
 
-.btn-theme-mode {
+#btn-theme-mode {
   background: var(--black) !important;
   border: 2px solid;
 }
 
-.btn-inner-white,
-.btn-inner-switch {
+#btn-inner-white,
+#btn-inner-switch {
   position: absolute;
   transition-duration: 0.2s;
   width: 100%;
@@ -108,15 +108,15 @@ button:hover {
   border-radius: 0 0 1rem 1rem;
 }
 
-.btn-inner-white {
+#btn-inner-white {
   background: var(--white);
 }
 
-.btn-print {
+#btn-print {
   padding: 0.38rem;
 }
 
-.btn-print img {
+#btn-print img {
   transition: filter 0.2s;
 }
 
@@ -132,11 +132,11 @@ button:hover {
 }
 
 /* Light Mode */
-.Header.light .btn-print img {
+.Header.light #btn-print img {
   filter: invert();
 }
 
-.Header.light .btn-inner-switch {
+.Header.light #btn-inner-switch {
   transform: rotate(180deg);
 }
 
@@ -146,11 +146,11 @@ button:hover {
 }
 
 .Header.pink button,
-.Header.pink .btn-inner-switch {
+.Header.pink #btn-inner-switch {
   background: var(--theme-pink);
 }
 
-.Header.pink .btn-theme-mode {
+.Header.pink #btn-theme-mode {
   border-color: var(--theme-pink);
 }
 
@@ -160,11 +160,11 @@ button:hover {
 }
 
 .Header.green button,
-.Header.green .btn-inner-switch {
+.Header.green #btn-inner-switch {
   background: var(--theme-green);
 }
 
-.Header.green .btn-theme-mode {
+.Header.green #btn-theme-mode {
   border-color: var(--theme-green);
 }
 
@@ -174,11 +174,11 @@ button:hover {
 }
 
 .Header.blue button,
-.Header.blue .btn-inner-switch {
+.Header.blue #btn-inner-switch {
   background: var(--theme-blue);
 }
 
-.Header.blue .btn-theme-mode {
+.Header.blue #btn-theme-mode {
   border-color: var(--theme-blue);
 }
 
