@@ -1,4 +1,4 @@
-const THEME_COLORS = ["green", "pink", "blue"];
+const THEME_COLORS = ["", "green", "pink", "blue"];
 
 // freeze constants
 Object.freeze(THEME_COLORS);
