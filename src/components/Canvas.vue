@@ -36,6 +36,7 @@ export default defineComponent({
 
 ::selection {
   color: var(--white);
+  background: var(--black);
 }
 
 /* Theme colors */
@@ -43,6 +44,11 @@ export default defineComponent({
 /* Dark-mode */
 .Canvas.dark #content {
   color: var(--white);
+}
+
+.Canvas.dark ::selection {
+  color: var(--black);
+  background: var(--white);
 }
 
 /* Pink */
