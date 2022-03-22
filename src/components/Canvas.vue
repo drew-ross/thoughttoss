@@ -19,11 +19,11 @@ export default defineComponent({
 .Canvas {
   height: 100%;
   padding: 4rem 6rem;
-  min-height: calc(100vh - 5rem);
 }
 
 #content {
   font-size: 1.5rem;
+  /* 100vh - (header height + Canvas y-padding) */
   min-height: calc(100vh - 14rem);
   width: 100%;
   font-family: var(--font-main);
@@ -70,5 +70,13 @@ export default defineComponent({
 
 .Canvas.blue ::selection {
   background: var(--theme-blue);
+}
+
+/* Media */
+@media only screen and (max-width: 768px) {
+  #content {
+    /* 100vh - (header height + Canvas y-padding) */
+    min-height: calc(100vh - 16.4rem);
+  }
 }
 </style>
