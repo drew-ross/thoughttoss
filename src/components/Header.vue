@@ -67,7 +67,7 @@ button {
   height: 2rem;
   min-width: 2rem;
   font: 1.4rem serif;
-  background: var(--theme-pink);
+  background: var(--black);
   color: var(--white);
   border: none;
   border-radius: 1rem;
@@ -97,13 +97,12 @@ button:hover {
 
 #btn-theme-mode {
   background: var(--black) !important;
-  border: 2px solid;
+  border: 2px solid var(--black);
 }
 
 #btn-theme-mode__white,
 #btn-theme-mode__switch {
   position: absolute;
-  transition-duration: 0.2s;
   width: 100%;
   height: 100%;
   top: 0;
@@ -114,6 +113,11 @@ button:hover {
 
 #btn-theme-mode__white {
   background: var(--white);
+}
+
+#btn-theme-mode__switch {
+  background: var(--black);
+  transition: transform 0.2s;
 }
 
 #btn-print {
@@ -131,8 +135,21 @@ button:hover {
   background: var(--black);
 }
 
+.Header.dark h1 {
+  color: var(--white);
+}
+
 .Header.dark button {
   color: var(--black);
+  background: var(--white);
+}
+
+.Header.dark #btn-theme-mode {
+  border-color: var(--white);
+}
+
+.Header.dark #btn-theme-mode__switch {
+  background: var(--white);
 }
 
 /* Light Mode */
