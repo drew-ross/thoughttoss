@@ -12,12 +12,12 @@
           <em>I</em>
         </button>
         <!-- theme mode (dark/light) -->
-        <button id="btn-theme-mode" @click="$emit('theme-mode')">
+        <button id="btn-theme-mode" @click="handleChangeMode">
           <div id="btn-theme-mode__white" />
           <div id="btn-theme-mode__switch" />
         </button>
         <!-- theme color -->
-        <button id="btn-theme-color" @click="$emit('theme-color')" />
+        <button id="btn-theme-color" @click="handleChangeColor" />
         <!-- print button -->
         <button id="btn-print" @click="printPage">
           <img src="../assets/print-solid.svg" />
@@ -36,6 +36,17 @@ export default defineComponent({
   methods: {
     textCommand: function (command: string) {
       document.execCommand(command, false);
+      this.focusContent();
+    },
+    handleChangeMode: function () {
+      this.$emit("theme-mode");
+      this.focusContent();
+    },
+    handleChangeColor: function () {
+      this.$emit("theme-color");
+      this.focusContent();
+    },
+    focusContent: function () {
       document.getElementById("content")?.focus();
     },
     printPage: function () {
