@@ -80,9 +80,12 @@ export default defineComponent({
 
 /* Media */
 @media only screen and (max-width: 768px) {
+  .Canvas {
+    padding: 2rem;
+  }
   #content {
     /* 100vh - (header height + Canvas y-padding) */
-    min-height: calc(100vh - 16.4rem);
+    min-height: calc(100vh - 10.4rem);
   }
 }
 </style>
