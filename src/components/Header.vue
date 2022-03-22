@@ -4,9 +4,13 @@
       <h1>thoughttoss</h1>
       <div class="menu-buttons">
         <!-- bold -->
-        <button id="btn-bold" @click="textCommand('bold')"><strong>B</strong></button>
+        <button id="btn-bold" @click="textCommand('bold')">
+          <strong>B</strong>
+        </button>
         <!-- italic -->
-        <button id="btn-italic" @click="textCommand('italic')"><em>I</em></button>
+        <button id="btn-italic" @click="textCommand('italic')">
+          <em>I</em>
+        </button>
         <!-- theme mode (dark/light) -->
         <button id="btn-theme-mode" @click="$emit('theme-mode')">
           <div id="btn-theme-mode__white" />
@@ -182,7 +186,18 @@ button:hover {
   border-color: var(--theme-blue);
 }
 
-/* Media styles */
+/* Media */
+@media only screen and (max-width: 768px) {
+  .Header {
+    height: 6.4rem;
+  }
+  #header-content {
+    flex-direction: column;
+  }
+  h1 {
+    position: initial;
+  }
+}
 @media print {
   .menu-buttons {
     display: none;
