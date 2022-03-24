@@ -11,6 +11,10 @@
         <button id="btn-italic" @click="textCommand('italic')">
           <em>I</em>
         </button>
+        <!-- underline -->
+        <button id="btn-underline" @click="textCommand('underline')">
+          <u>U</u>
+        </button>
         <!-- theme mode (dark/light) -->
         <button id="btn-theme-mode" @click="handleChangeMode">
           <div id="btn-theme-mode__white" />
