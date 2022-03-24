@@ -15,6 +15,7 @@
         <button id="btn-underline" @click="textCommand('underline')">
           <u>U</u>
         </button>
+        <div class="spacer" />
         <!-- theme mode (dark/light) -->
         <button id="btn-theme-mode" @click="handleChangeMode">
           <div id="btn-theme-mode__white" />
@@ -22,6 +23,7 @@
         </button>
         <!-- theme color -->
         <button id="btn-theme-color" @click="handleChangeColor" />
+        <div class="spacer" />
         <!-- print button -->
         <button id="btn-print" @click="printPage">
           <img src="../assets/print-solid.svg" />
@@ -103,6 +105,14 @@ button:hover {
   justify-items: center;
 }
 
+.spacer {
+  height: 1rem;
+  width: 2px;
+  margin: 0.5rem 1.2rem 0 1.2rem;
+  opacity: 0.3;
+  background: var(--black);
+}
+
 #header-content {
   display: flex;
   align-items: center;
@@ -167,6 +177,10 @@ button:hover {
   background: var(--white);
 }
 
+.Header.dark .spacer {
+  background: var(--white);
+}
+
 /* Light Mode */
 .Header.light #btn-print img {
   filter: invert();
@@ -190,6 +204,10 @@ button:hover {
   border-color: var(--theme-pink);
 }
 
+.Header.pink .spacer {
+  background: var(--theme-pink);
+}
+
 /* Green */
 .Header.green h1 {
   color: var(--theme-green);
@@ -204,6 +222,10 @@ button:hover {
   border-color: var(--theme-green);
 }
 
+.Header.green .spacer {
+  background: var(--theme-green);
+}
+
 /* Blue */
 .Header.blue h1 {
   color: var(--theme-blue);
@@ -216,6 +238,10 @@ button:hover {
 
 .Header.blue #btn-theme-mode {
   border-color: var(--theme-blue);
+}
+
+.Header.blue .spacer {
+  background: var(--theme-blue);
 }
 
 /* Media */
