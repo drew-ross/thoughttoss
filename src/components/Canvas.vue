@@ -53,6 +53,7 @@ export default defineComponent({
 
 /* Pink */
 .Canvas.pink #content {
+  color: var(--theme-pink);
   caret-color: var(--theme-pink-50);
 }
 
@@ -62,6 +63,7 @@ export default defineComponent({
 
 /* Green */
 .Canvas.green #content {
+  color: var(--theme-green);
   caret-color: var(--theme-green);
 }
 
@@ -71,6 +73,7 @@ export default defineComponent({
 
 /* Blue */
 .Canvas.blue #content {
+  color: var(--theme-blue);
   caret-color: var(--theme-blue-50);
 }
 
