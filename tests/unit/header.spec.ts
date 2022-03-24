@@ -41,4 +41,17 @@ describe("Header.vue", () => {
     // expect call
     expect(mockTextCommand).toHaveBeenCalledWith("italic");
   });
+
+  it("calls textCommand on clicking Underline button", async () => {
+    // mount Header
+    const wrapper = shallowMount(Header, {
+      props: props.default,
+    });
+
+    // click Underline button
+    wrapper.find("#btn-underline").trigger("click");
+
+    // expect call
+    expect(mockTextCommand).toHaveBeenCalledWith("underline");
+  });
 });
