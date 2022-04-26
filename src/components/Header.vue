@@ -249,20 +249,25 @@ button:hover {
   .Header {
     height: 6.4rem;
   }
+
   #header-content {
     flex-direction: column;
   }
+
   h1 {
     position: initial;
   }
 }
+
 @media print {
   .menu-buttons {
     display: none;
   }
+
   .Header {
     height: 2.4rem;
   }
+
   h1 {
     font-size: 0.8rem;
     position: inherit;
