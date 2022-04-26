@@ -5,29 +5,21 @@
       <div class="menu-buttons">
         <!-- bold -->
         <button id="btn-bold" @click="textCommand('bold')">
-          <div class="btn-content">
-            <strong>B</strong>
-          </div>
+          <strong>B</strong>
         </button>
         <!-- italic -->
         <button id="btn-italic" @click="textCommand('italic')">
-          <div class="btn-content">
-            <em>I</em>
-          </div>
+          <em>I</em>
         </button>
         <!-- underline -->
         <button id="btn-underline" @click="textCommand('underline')">
-          <div class="btn-content">
-            <u>U</u>
-          </div>
+          <u>U</u>
         </button>
         <div class="spacer" />
         <!-- theme mode (dark/light) -->
         <button id="btn-theme-mode" @click="handleChangeMode">
-          <div class="btn-content">
-            <div id="btn-theme-mode__white" />
-            <div id="btn-theme-mode__switch" />
-          </div>
+          <div id="btn-theme-mode__white" />
+          <div id="btn-theme-mode__switch" />
         </button>
         <!-- theme color -->
         <button id="btn-theme-color" @click="handleChangeColor" />
@@ -89,8 +81,8 @@ h1 {
 }
 
 button {
-  height: 2rem;
-  width: 2rem;
+  height: 32px;
+  width: 32px;
   font: 1.4rem serif;
   background: var(--black);
   color: var(--white);
@@ -106,14 +98,6 @@ button {
 button:hover {
   transform: translateY(-0.1rem);
   transition-duration: 0.2s;
-}
-
-.btn-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0.2rem;
-  bottom: 0;
 }
 
 .menu-buttons {
