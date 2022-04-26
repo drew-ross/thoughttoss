@@ -83,6 +83,7 @@ h1 {
 button {
   height: 32px;
   width: 32px;
+  padding: 0;
   font: 1.4rem serif;
   background: var(--black);
   color: var(--white);
