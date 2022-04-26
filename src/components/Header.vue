@@ -81,8 +81,9 @@ h1 {
 }
 
 button {
-  height: 2rem;
-  min-width: 2rem;
+  height: 32px;
+  width: 32px;
+  padding: 0;
   font: 1.4rem serif;
   background: var(--black);
   color: var(--white);
@@ -249,20 +250,25 @@ button:hover {
   .Header {
     height: 6.4rem;
   }
+
   #header-content {
     flex-direction: column;
   }
+
   h1 {
     position: initial;
   }
 }
+
 @media print {
   .menu-buttons {
     display: none;
   }
+
   .Header {
     height: 2.4rem;
   }
+
   h1 {
     font-size: 0.8rem;
     position: inherit;
