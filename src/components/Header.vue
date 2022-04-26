@@ -93,6 +93,7 @@ button {
   cursor: pointer;
   position: relative;
   transition: color 0.2s;
+  -webkit-appearance: none;
 }
 
 button:hover {
