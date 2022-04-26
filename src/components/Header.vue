@@ -82,7 +82,7 @@ h1 {
 
 button {
   height: 2rem;
-  min-width: 2rem;
+  width: 2rem;
   font: 1.4rem serif;
   background: var(--black);
   color: var(--white);
@@ -93,7 +93,6 @@ button {
   cursor: pointer;
   position: relative;
   transition: color 0.2s;
-  -webkit-appearance: none;
 }
 
 button:hover {
